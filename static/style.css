@@ -1,0 +1,78 @@
+/* PREMIUM PURPLE OS MONITOR UI */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-top:#3A1F71;
+    --bg-bottom:#140828;
+    --card-bg:rgba(63,42,112,0.65);
+    --card-border:rgba(255,255,255,0.12);
+    --text-main:#FFFFFF;
+    --text-sub:#D4C9F2;
+    --text-dim:#B6A9D5;
+    --yellow:#FFBE3B;
+    --purple-light:#CFC3FF;
+}
+
+body {
+    font-family:"Inter",sans-serif;
+    background:linear-gradient(180deg,var(--bg-top),var(--bg-bottom));
+    color:var(--text-main);margin:0;padding:0;
+}
+
+.dashboard-title {
+    font-weight:700;font-size:2rem;text-align:center;color:var(--text-main);margin-bottom:1.5rem;
+}
+
+/* ----- TILES ----- */
+.tile-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-bottom:2rem;}
+
+.tile-card {
+    background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;
+    padding:14px 17px;transition:0.25s ease-in-out;
+}
+.tile-card:hover {background:rgba(78,54,135,0.75);transform:translateY(-2px);}
+
+.tile-header {display:flex;align-items:center;margin-bottom:10px;}
+.tile-icon i {font-size:1.45rem;color:var(--purple-light);margin-right:9px;}
+.tile-title {font-size:.95rem;font-weight:600;}
+.tile-subtitle {font-size:.75rem;color:var(--text-dim);}
+
+.tile-main {display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:5px;}
+.tile-label {font-size:.7rem;color:var(--text-dim);text-transform:uppercase;}
+.tile-value {font-size:1.45rem;font-weight:700;}
+.tile-secondary {font-size:.8rem;color:var(--text-sub);}
+
+/* Small text for Network Upload/Download */
+.tile-secondary span {
+    font-size:.78rem;
+    color:var(--text-sub);
+}
+
+.tile-footer {font-size:.72rem;color:var(--text-dim);}
+
+/* Accents */
+.accent-gold{color:var(--yellow);}
+.accent-blue{color:#82CFFF;}
+.accent-orange{color:#FF933B;}
+.accent-green{color:#7BFF7D;}
+
+/* CHART PANELS */
+.panel-card {background:rgba(63,42,112,0.72);border:1px solid var(--card-border);
+    border-radius:16px;margin-bottom:1rem;}
+.panel-header {
+    padding:9px 15px;font-size:.75rem;font-weight:600;text-transform:uppercase;
+    color:var(--text-sub);border-bottom:1px solid rgba(255,255,255,0.12);
+}
+.panel-body {padding:14px 16px;}
+
+/* PROCESS TABLE */
+.table.process-table {border-collapse:separate;border-spacing:0 7px;font-size:.85rem;}
+.table.process-table thead th {background:rgba(63,42,112,0.65);color:var(--text-sub);border:none;}
+.table.process-table tbody tr {background:rgba(63,42,112,0.4);color:var(--text-main);transition:0.2s;}
+.table.process-table tbody tr:hover {background:rgba(75,55,130,0.65);}
+.table td,.table th {border:none;padding:8px 12px;}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {width:6px;}
+::-webkit-scrollbar-thumb {background:var(--purple-light);border-radius:6px;}
